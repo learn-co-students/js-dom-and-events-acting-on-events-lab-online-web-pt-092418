@@ -14,27 +14,29 @@ function retrieveEmployeeInformation(){
 function addNewElementAsLi() {
   let ul = document.getElementsByTagName('ul')[0]
   let li = document.createElement('li');
-  li.innerHTML = retrieveEmployeeInformation()
-  ul.appendChild(li);
+  let employee = retrieveEmployeeInformation()
+  li.innerHTML = employee
+  ul.append(li);
 
-  // let employeeName = retrieveEmployeeInformation()
-  // document.querySelector('.employee-list').insertAdjacentHTML('beforeend', `<li>${employeeName}</li>`)
 }
 
-function addNewLiOnClick() {
-  let submit = document.querySelector('input[type="submit"]')
-  submit.addEventListener('click', function(e){
-    addNewElementAsLi();
-    document.querySelector('input').value = '';
-    })
-  }
+ // this.timeout(500);
+ //  setTimeout(done, 300);
 
-function clearEmployeeListOnLinkClick() {
-  let clearLink = document.querySelector('a')
-  let ul = document.querySelector('ul')
-  clearLink.addEventListener('click', function(e){
-    ul.innerHTML = '';
-  })
-
-  // document.querySelector('ul').remove();
-}
+// function addNewLiOnClick() {
+//
+//   let submit = document.querySelector('input[type="submit"]')
+//
+//   submit.addEventListener('click', function(e){
+//     addNewElementAsLi();
+//     document.querySelector('input').value = '';
+//     })
+//   }
+//
+// function clearEmployeeListOnLinkClick() {
+//   let clearLink = document.querySelector('a')
+//   let ul = document.querySelector('ul')
+//   clearLink.addEventListener('click', function(e){
+//     ul.innerHTML = '';
+//   })
+// }
