@@ -20,23 +20,23 @@ function addNewElementAsLi() {
 
 }
 
- // this.timeout(500);
- //  setTimeout(done, 300);
+ this.timeout(500);
+  setTimeout(done, 300);
 
-// function addNewLiOnClick() {
-//
-//   let submit = document.querySelector('input[type="submit"]')
-//
-//   submit.addEventListener('click', function(e){
-//     addNewElementAsLi();
-//     document.querySelector('input').value = '';
-//     })
-//   }
-//
-// function clearEmployeeListOnLinkClick() {
-//   let clearLink = document.querySelector('a')
-//   let ul = document.querySelector('ul')
-//   clearLink.addEventListener('click', function(e){
-//     ul.innerHTML = '';
-//   })
-// }
+function addNewLiOnClick() {
+
+  let submit = document.querySelector('input[type="submit"]')
+
+  submit.addEventListener('click', function(e){
+    addNewElementAsLi();
+    document.querySelector('input').value = '';
+    })
+  }
+
+function clearEmployeeListOnLinkClick() {
+  let clearLink = document.querySelector('a')
+  let ul = document.querySelector('ul')
+  clearLink.addEventListener('click', function(e){
+    ul.innerHTML = '';
+  })
+}
