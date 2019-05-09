@@ -11,14 +11,18 @@ function retrieveEmployeeInformation() {
 }; 
 
 function addNewElementAsLi() {
-  return retrieveEmployeeInformation.innerHTMl.appendChild('li');
-}
+    const newLi = document.createElement("li");
+    newLi.innerHTML = retrieveEmployeeInformation();
+    document.querySelector("ul.employee-list").appendChild(newLi);
+  }
 
-function addNewLiOnClick() {
-  return let submit = document.querySelector('input[type="submit"]')
-  let event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': true
-  });
-}
+  function addNewLiOnClick() {
+      addNewElementAsLi();
+      document.querySelector("input").value = "";
+    }
+
+  function clearEmployeeListOnLinkClick() {
+      document.querySelector("a").addEventListener("click", function() {
+        document.querySelector("ul.employee-list").innerHTML = "";
+        });
+      }
